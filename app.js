@@ -19,7 +19,7 @@ fileClick.addEventListener("change", e => {
 
 function decodeQRCode(formdata, file) {
     infoText.innerHTML = "Scanning QR Code.....";
-    fetch("http://api.qrserver.com/v1/read-qr-code/", {
+    fetch("https://api.qrserver.com/v1/read-qr-code/", {
         method: "POST", body: formdata
     }).then(res => res.json()).then(result => {
         let qrResult = result[0].symbol[0].data;
