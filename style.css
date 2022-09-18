@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #E4F2FE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#wrapper{
+    width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(47, 47, 202);
+    height: 200px;
+    transition: 0.5s linear;
+}
+
+#wrapper.active{
+    height: 530px;
+}
+
+#wrapper form{
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wrapper form img{
+    display: none;
+}
+
+#wrapper.active form img{
+    display: block;
+}
+
+#wrapper form .upload-content{
+    text-align: center;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#wrapper.active form .upload-content{
+    display: none;
+}
+
+#wrapper form .upload-content i{
+    font-size: 50px;
+    color: rgb(47, 47, 202);
+    margin: 20px 0;
+}
+
+#wrapper form .upload-content p{
+    font-size: 25px;
+}
+
+#wrapper #details{
+    margin-top: 30px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#wrapper.active #details{
+    opacity: 1;
+    pointer-events: initial;
+}
+
+#wrapper #details textarea{
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    height: 100px;
+    outline: none;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+#wrapper #details .buttons{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#wrapper #details .buttons button{
+    height: 55px;
+    width: calc(100% / 2 - 10px);
+    color: #3498DB;
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
